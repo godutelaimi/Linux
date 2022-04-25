@@ -1,0 +1,30 @@
+#Create a script that takes two number parameters a and b and then shows True if a is larger than b or False otherwise.
+
+$ vim is_a_larger_than_b
+
+echo "iS A LARGER THAN B"
+echo -n "Enter A: "
+read A
+echo -n "Enter B: "
+read B
+if [ $A > $B ]
+  then
+          echo "True"
+  else
+          echo "False"
+fi
+
+
+
+#Create a second version of the script that then tells the user the difference between the two numbers.
+
+$ vim diff_a_b
+
+echo "A minus B"
+echo -n "Enter first number: "
+read first_number
+echo -n "Enter second number: "
+read second_number
+
+sum=$(($first_number - $second_number))
+echo "$first_number minus $second_number is: $sum"
