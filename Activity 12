@@ -1,0 +1,4 @@
+#Write a script that checks if two files have at least one common element or not. Display an appropriate message for both scenarios. The file names should be specified as parameters. 
+#You will need to create the files to test this.
+
+$ comm lottery.sh lottery.txt
