@@ -1,0 +1,40 @@
+
+
+#Create a 10-question true or false quiz game in your script. 
+#Choose a topic of your liking for the questions!
+#Code needs to be finnished, it is only concept
+
+$ vim quiz.sh
+
+#!/bin/bash
+
+#Quiz program
+
+Score=0
+qnum=0
+points=0
+
+#Question
+
+add 1 to qnum
+echo "Is apple a fruit?"
+read input to variable answer
+
+#Answer
+
+echo "$canswer"
+
+#Score
+
+if answer = canswer
+then points=$points+1
+
+#Final scoring
+
+score=100*(points/qnum)
+echo  "Score is 100*points/qnum"
+echo  "Total questions answered, $qnum"
+echo  "$points correct answer"
+echo  "Score was $Score"
+
+#End
