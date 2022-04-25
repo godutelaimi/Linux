@@ -1,0 +1,30 @@
+#Activity 2
+#Create a directory with a few test files in it (the files can be empty)
+
+$ mkdir testfile testfile2 testfile3
+
+
+#Now write a script that for every file in that directory you rename 
+#it to have an extension of today's date in YYYYMMDD format.
+
+$ vim rename_files
+
+#/bin/bash
+now=$(date +"%m_%d_%Y")
+echo "testfile : /nas/backup_$now"
+
+$ vim rename_files1
+
+#/bin/bash
+now=$(date +"%m_%d_%Y")
+echo "testfile2 : /nas/backup_$now"
+
+$ vim rename_files2
+
+#/bin/bash
+now=$(date +"%m_%d_%Y")
+echo "testfile3 : /nas/backup_$now"
+
+
+
+
