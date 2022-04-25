@@ -1,0 +1,48 @@
+# Write a script that takes two files of unique numbers 
+#and displays the difference between the two lists (without using grep).
+#For example:
+#File 1 contains:
+
+#1
+#2
+#4
+#6
+
+#File 2 contains:
+
+#1
+#2
+#89
+#6
+#7
+
+$ vim file1.txt
+
+#!/bin/bash
+
+1
+2
+4
+6
+
+$ vim file2.txt
+
+1
+2
+89
+6
+7
+
+#The output should look like:
+
+#Only in file 1:
+#4
+
+#Only in file 2:
+#89
+#7
+
+$ cat file1.txt
+$ cat file2.txt
+$ diff -y file1.txt file2.txt
+
