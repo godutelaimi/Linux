@@ -1,0 +1,13 @@
+#Another attempt for Quiz
+
+#!/bin/bash
+
+echo "Is apple a fruit?"
+
+echo -n "y/n: "
+read -r
+if y print "Correct"
+else print "Wrong"
+echo
+echo "Answers:"
+echo "1. $fruit"
