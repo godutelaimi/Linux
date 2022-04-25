@@ -1,0 +1,39 @@
+#You are in charge of creating a program for the lottery in your area! 
+#The options are for numbers between 1and 50. Create a script that picks 5 for each draw plus a bonus ball number between 1 and 10. 
+#Output the numbers to a file that has the date in its name.
+#Create another script that will allow users to check their lottery numbers and advise them if they match or not and how many matches they got.
+
+$vim lotterynumbers.sh
+
+#!/bin/bash
+check_number() {
+local __check_number=$1
+local lottery_number=$2
+local x
+for ((x = 0; x &lt; ${#lottery[@]} ; x ++ ))
+do
+if [ ${lottery[$x]} -eq $lottery_number ]
+then
+eval $__check_number=true
+fi
+done
+}
+generate_main_number() {
+local number
+number_type=$1
+number_picked=false
+until $number_picked ; do
+if [ $number_type == &quot;First&quot; ]
+then
+number=$(( $RANDOM % 24 + 1 ))
+else
+number=$(( $RANDOM % 24 + 26 ))
+fi
+number_exists=false
+check_number number_exists $number
+
+if ! $number_exists
+then
+return $number
+number_picked=true
+fi
